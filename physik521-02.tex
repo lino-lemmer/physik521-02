@@ -18,6 +18,7 @@
 \marginpar{M.\,U.}
 
 \subsection{Herleitung der adiabatischen Zustandsänderungen}
+\label{ssec:H2.1.a}
 
 \subsubsection{Erste Relation}
 
@@ -80,6 +81,65 @@ Nun können wir aus dem Nichts die Relation folgern:
 \end{align*}
 
 \section{Otto-Zyklus}
+
+\subsection{Adiabatische Kompression}
+
+Adiabatisch heißt hier $\dif Q = 0$. Die Änderung der inneren Energie $\Delta U$ geht also vollständig in mechanische Arbeit über:
+
+\begin{align}
+    \Delta W_{\text{A}\to\text{B}} &= -\Delta U_{\text{A}\to\text{B}} = \frac f2 Nk_\text{B}\del{T_\text{A}-T_\text{B}} \notag
+    \intertext{Zudem gilt die in \ref{ssec:H2.1.a} hergeleitete Beziehung}
+    VT^{\frac f2} &= \text{const} \notag
+    \intertext{sodass gilt}
+    \frac{V_\text{A}}{V_\text{B}} &= \del{ \frac{T_\text{A}}{T_\text{B}}}^{-\frac f2} \label{eq:VA/VB}
+\end{align}
+
+\subsection{Isochore Erwärmung}
+
+Isochor bedeutet $\Delta V = 0$. Es wird also keine mechanische Arbeit verrichtet.
+
+\[
+    \Delta Q_{\text{B}\to\text{C}} = \Delta U = \frac f2 Nk_\text{B}\del{T_\text{C}-T_\text{B}}
+\]
+
+\subsection{Adiabatische Expansion}
+
+\begin{align}
+    \Delta W_{\text{C}\to\text{D}} &= -\Delta U_{\text{C}\to\text{D}}  = \frac f2 Nk_\text{B}\del{T_\text{C}-T_\text{D}} \notag\\
+    \frac{V_\text{C}}{V_\text{D}} &= \del{ \frac{T_\text{C}}{T_\text{D}}}^{-\frac f2} \label{eq:VC/VD}
+\end{align}
+
+\subsection{Isochore Abkühlung}
+
+\[
+    \Delta Q_{\text{D}\to\text{A}}  = \Delta U_{\text{D}\to\text{A}}   = \frac f2 Nk_\text{B}\del{T_\text{A}-T_\text{D}}
+\]
+
+\subsection{Gesamter Prozess}
+
+Die Gesamte am System verrichtete Arbeit ist
+
+\begin{align}
+    W &= \Delta W_{\text{A}\to\text{B}} + \Delta W_{\text{C}\to\text{D}} \notag\\
+      &= \frac f2 Nk_\text{B}\del{T_\text{A} + T_\text{C} - T_\text{B} - T_\text{D}} \notag
+    \intertext{Die eingebrachte Wärmeenergie ist}
+    Q_\text{in} &= \Delta Q_{\text{B}\to\text{C}} \notag\\
+                &= \frac f2 Nk_\text{B}\del{T_\text{C}-T_\text{B}} \notag
+    \intertext{Damit ist der Wirkungsgrad}
+    \eta_\text{Otto} &= \frac{W}{Q_\text{in}} \notag\\
+    &= \frac {T_\text{B} + T_\text{D} - T_\text{A} - T_\text{C}}
+    {T_\text{C}-T_\text{B}} \label{eq:eta_Otto}
+    \intertext{Da im Otto-Zyklus $V_\text{A}=V_\text{D}$ und $V_\text{B} = V_\text{C}$ gilt folgt aus den Gleichungen~\eqref{eq:VA/VB}~und~\eqref{eq:VC/VD}}
+    \frac{T_\text{A}}{T_\text{B}} &= \frac{T_\text{D}}{T_\text{C}} \notag
+    \intertext{Sei nun $T_\text{D} = \alpha T_\text{A}$ Dann ist auch $T_\text{C} = \alpha T_\text{B}$. Damit ergibt sich aus Gleichung \eqref{eq:eta_Otto}:}
+    &= \frac{\del{1-\alpha}T_\text{B} - \del{1-\alpha}T_\text{A}}{\del{1-\alpha}T_\text{B}} \notag\\
+    &= 1-\frac{T_\text{A}}{T_\text{B}}\notag
+    \intertext{Mit Gleichung \eqref{eq:VA/VB} erhält man}
+    &= 1 - \del{ \frac{V_\text{B}}{V_\text{A}} }^{\frac 2f} \notag
+    \intertext{Mit $\frac 2f = \frac{f+2}f-1 = \kappa-1$ ergibt sich die gesuchte Relation}
+    &= 1 - \del{ \frac{V_\text{B}}{V_\text{A}} }^{\kappa-1} \notag
+\end{align}
+
 
 \section{Inverser Carnot-Prozess als Wärmepumpe}
 
